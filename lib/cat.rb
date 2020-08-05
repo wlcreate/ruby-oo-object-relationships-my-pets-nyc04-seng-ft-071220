@@ -1,3 +1,3 @@
 class Cat
- anything 
+ 
 end
