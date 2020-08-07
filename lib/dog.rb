@@ -1,15 +1,22 @@
 require 'pry'
 class Dog
 
-  attr_accessor :owner, :mood, :name
-  attr_reader 
+  attr_accessor :owner, :mood
+  attr_reader :name
 
-  def initialize(name_par, mood_par, owner_par)
+  @@all = []
+
+  def initialize(name_par, owner_par)
     @name = name_par
-    @mood = mood_par
     @owner = owner_par
-    #binding.pry
+    @mood = "nervous"
+    @@all << self
   end
+
+  def self.all
+    @@all
+  end
+
 end
 
 #binding.pry
